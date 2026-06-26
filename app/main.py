@@ -10,6 +10,12 @@ from app.routes.chat import router
 from app.routes.auth import router as auth_router
 from dotenv import load_dotenv
 
+from app.db.session import engine, Base
+from app.models import database
+
+# Create all tables in the database automatically
+Base.metadata.create_all(bind=engine)
+
 load_dotenv()
 
 # FastAPI App
