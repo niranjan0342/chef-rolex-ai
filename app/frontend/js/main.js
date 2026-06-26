@@ -1,4 +1,4 @@
-const API_BASE = "http://localhost:8000/api/v1";
+const API_BASE = "/api/v1";
         let sessionId = localStorage.getItem("session_id");
         let token = localStorage.getItem("token");
         let currentUser = null;
