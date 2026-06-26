@@ -25,7 +25,7 @@ app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 # CORS — Frontend connect பண்ண allow பண்ணு
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Later specific URL கொடு
+    allow_origins=["https://chef-rolex-ai.onrender.com", "http://localhost:8000"],  # Locked to production & local testing
     allow_methods=["*"],
     allow_headers=["*"]
 )
